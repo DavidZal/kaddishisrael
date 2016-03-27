@@ -1,0 +1,30 @@
+{
+  "name": "kaddish",
+  "version": "1.0.0",
+  "description": "kaddish in israel",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "cshtml": "^1.0.5",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidZal/kaddish-in-israel.git"
+  },
+  "keywords": [
+    "kaddish"
+  ],
+  "author": "david",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidZal/kaddish-in-israel/issues"
+  },
+  "homepage": "https://github.com/DavidZal/kaddish-in-israel#readme"
+}

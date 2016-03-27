@@ -1,0 +1,70 @@
+﻿@layout views/Layout.html
+
+<h1>Choose Your Program</h1>
+
+<!--<form role="form">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="radio">
+                <label><input type="radio" name="optradio" value="4">Kaddish three times daily and Torah learning daily for the year after death, and then on the yahrzeit annually - $450</label>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="radio">
+                <label><input type="radio" name="optradio" value="3">Kaddish three times daily and Torah learning daily for the year after death, and then on the first yahrzeit - $350</label>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="radio">
+                <label><input type="radio" name="optradio" value="2">Kaddish three times and Torah learning on the yahrzeit annually - $150</label>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="radio">
+                <label><input type="radio" name="optradio" value="1">Kaddish three times and Torah learning on the first yahrzeit - $65</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label><input type="checkbox" name="kotel">Enhancing any of the plans above by having Kaddish said on the first yahrzeit at the Kotel (Western Wall in Jerusalem) - $350</label>
+    </div>
+    <div class="checkbox">
+
+    </div>
+    <button type="submit" class="btn btn-default">Next ></button>
+</form>-->
+
+<form role="form">
+    <div class="row">
+                @foreach(var plan in plans.planItems)[[
+        <div class="col-md-3">
+            <div class="panel panel-default" data-hover>
+                <div class="panel-heading" style="background:[[plan.headerColor]]">[[plan.name]]</div>
+
+                <div class="panel-body">
+                    <p>
+                       [[plan.price]]
+                    </p>
+                </div>
+
+                <ul class="list-group">
+                    @foreach(var item in plan.features)[[
+                    <li class="list-group-item">[[plans.features[item]]]</li>
+                   ]]
+                </ul>
+            </div>
+        </div>
+        ]]
+    </div>
+    <div class="form-group">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="">
+                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                Enhancing any of the plans above by having Kaddish said on the first yahrzeit at the Kotel (Western Wall in Jerusalem) - $350
+            </label>
+        </div>
+    </div>
+   
+    <div class="btn btn-default">Next ></div>
+</form>

@@ -1,0 +1,7 @@
+user:david32886
+pw:Kaddishinisrael111
+pin: 1970
+
+cpanel
+user:kaddishadmin11
+pw:Admin11kaddish

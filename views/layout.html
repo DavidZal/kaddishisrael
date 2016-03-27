@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>[[title]]</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="/style/shared.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    [[var page = pages.filter(function(p){return p.active})[0].name]]
+    @if(page == 'programs')[[
+    <link href="/style/check.css" rel="stylesheet" />
+    ]]
+</head>
+<body>
+    <div class="headerContainer">
+        <img class="headerImage"src="/images/header.jpg" />
+        <div class="menuContainer">@render views/partials/nav.html
+        </div>
+    </div>
+    <div class="container context">
+        @renderBody
+    </div>
+    <div class="footerContainer">
+        @render views/partials/footer.html
+    </div>
+
+    <script src="/scripts/jquery-1.9.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   
+    @if(page == 'programs')[[
+    <script src="/scripts/order.js"></script>
+
+    ]]
+
+</body>
+</html>
